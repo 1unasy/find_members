@@ -11,4 +11,4 @@ class FindMembers(models.Model):
         return f'[{self.pk}]{self.name}'
 
     def get_absolute_url(self):
-        return "/members/{}".format(self.pk)
+        return '/members/{}'.format(self.pk)

@@ -7,9 +7,23 @@
 <body>
     <h1>Member list</h1>
 
-    <ul>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>이메일</th>
+            </tr>
+        </thead>
+        <tbody>
         {% for m in members %}
-            <li><a href="{{ p.get_absolute_url }}">{{m.name}} / {{m.email}}</a></li>
+            <tr>
+                <td>{{ m.pk }}</td>
+                <td><a href="{{ m.get_absolute_url }}">{{ m.name }}</a></td>
+                <td><a href="{{ m.get_absolute_url }}">{{ m.email }}</a></td>
+            </tr>
         {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
