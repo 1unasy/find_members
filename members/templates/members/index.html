@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>members</title>
+</head>
+<body>
+    <h1>Member list</h1>
+
+    <ul>
+        {% for m in members %}
+            <li><a href="{{ p.get_absolute_url }}">{{m.name}} / {{m.email}}</a></li>
+        {% endfor %}
+</body>
+</html>
